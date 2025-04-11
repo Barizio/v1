@@ -104,8 +104,7 @@ export default function HireStep() {
         "Growth opportunities",
         "Creativity",
         "Making an impact",
-        "Working with people",
-        "Prestige/reputation"
+        "Working with people"
       ]
     },
     {
@@ -209,7 +208,7 @@ export default function HireStep() {
       : [];
 
   return (
-    <div className="w-full max-w-md p-6 flex flex-col items-center text-center min-h-screen mx-auto relative justify-center">
+    <div className="w-full bg-amber-50 max-w-full p-6 flex flex-col items-center text-center min-h-screen mx-auto relative justify-center">
       <AnimatePresence mode="wait">
         <motion.div
           key={step}
@@ -217,22 +216,22 @@ export default function HireStep() {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -50 }}
           transition={{ duration: 0.4 }}
-          className="w-full"
+          className="w-[80%]"
         >
-          <h2 className="text-2xl sm:text-3xl font-semibold mb-6">
+          <h2 className="text-2xl text-black sm:text-3xl font-semibold mb-6">
             {currentStep.question}
           </h2>
 
           {/* Multiple choice options */}
           {currentStep.options && (
-            <div className="flex flex-col sm:flex-row gap-4 mb-8 w-full">
+            <div className="flex justify-center flex-col sm:flex-row gap-4 mb-8 w-full">
               {currentStep.options.map((option) => (
                 <button
                   key={option}
                   onClick={() => handleSelect(option)}
-                  className={`flex-1 border rounded-lg p-4 transition-all ${
+                  className={`flex-1 text-black border min-w-[200px] rounded-lg p-4 transition-all ${
                     selected === option || answers[step] === option
-                      ? "border-pink-500 ring-2 ring-pink-300"
+                      ? "border-blue-700 ring-2 ring-blue-700"
                       : "border-gray-300"
                   }`}
                 >
@@ -240,7 +239,7 @@ export default function HireStep() {
                     <div
                       className={`w-4 h-4 rounded-full border-2 ${
                         selected === option || answers[step] === option
-                          ? "border-pink-500 bg-pink-500"
+                          ? "border-blue-500 bg-blue-500"
                           : "border-gray-400"
                       }`}
                     />
@@ -258,7 +257,7 @@ export default function HireStep() {
               placeholder={currentStep.placeholder}
               value={answers[step] || ""}
               onChange={handleInputChange}
-              className="w-full p-4 border rounded-lg mb-8 text-lg focus:outline-none focus:ring-2 focus:ring-pink-300"
+              className="w-full p-4 text-black   border border-gray-700 placeholder:text-slate-300 rounded-lg mb-8 text-lg focus:outline-none focus:ring-2 focus:ring-blue-300"
             />
           )}
 
@@ -313,7 +312,7 @@ export default function HireStep() {
         )}
         <button
           onClick={handleContinue}
-          className="bg-black text-white py-2 px-6 rounded-full"
+          className="bg-blue-700 text-white py-2 px-6 rounded-full"
         >
           {step < steps.length - 1 ? "Continue" : "Finish"}
         </button>
@@ -322,7 +321,7 @@ export default function HireStep() {
       {/* Optional Background */}
       <div className="absolute bottom-0 left-0 w-full h-32 sm:h-40">
         <img
-          src="/bg-abstract.png"
+          src="/img1.png"
           alt="Background"
           className="object-cover w-full h-full opacity-90"
         />
