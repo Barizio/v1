@@ -18,23 +18,117 @@ export default function HireStep() {
   const [followedGroups, setFollowedGroups] = useState<number[]>([]);
 
   const steps: StepType[] = [
-    {
-      question: "First things first, are you here to hire?",
-      options: ["yes", "no"],
-    },
-    {
-      question: "What is your full name?",
-      input: true,
-      placeholder: "e.g. Adebare Adesokan",
-    },
-    {
-      question: "What best describes you?",
-      options: ["Designer", "Developer", "Product Manager"],
-    },
-    {
-      question: "Suggestions for you",
-      isSuggestionStep: true,
-    },
+    
+      {
+        "question": "What is your full name?",
+        "input": true,
+        "placeholder": "e.g. Adebare Adesokan"
+      },
+      {
+        "question": "What kind of impact would you like your work to have in the world?",
+        "input": true,
+        "placeholder": "e.g., Solve environmental issues, Help people through healthcare"
+      },
+      {
+        "question": "What type of career are you considering right now (if any)?",
+        "options": ["Tech", "Business", "Design", "Medicine", "Research", "Not Sure"]
+      },
+      {
+        "question": "Where do you see yourself in the next 3–5 years?",
+        "input": true,
+        "placeholder": "e.g., Working as a full-stack developer, Running my own business"
+      },
+      {
+        "question": "Are you hoping to do any of the following in the next few years?",
+        "options": [
+          "Get an internship",
+          "Land my first full-time job",
+          "Build a portfolio",
+          "Learn in-demand skills",
+          "Start a business",
+          "Go to grad school",
+          "Still exploring"
+        ]
+      },
+      {
+        "question": "What’s your current field of study?",
+        "input": true,
+        "placeholder": "e.g., Computer Science, Business Administration"
+      },
+      {
+        "question": "Does your course align with what you want to do long term?",
+        "options": ["Yes", "Not really", "Still figuring it out"]
+      },
+      {
+        "question": "Do you want a career that’s related to your major or something different?",
+        "options": ["Related to my major", "Something different"]
+      },
+      {
+        "question": "What are your current strengths?",
+        "input": true,
+        "placeholder": "e.g., Problem-solving, Communication, Creativity"
+      },
+      {
+        "question": "What skills would you love to develop more?",
+        "input": true,
+        "placeholder": "e.g., Data analysis, Public speaking"
+      },
+      {
+        "question": "What are you currently doing to build your career outside of school?",
+        "options": [
+          "Side projects",
+          "Internships",
+          "Volunteering",
+          "Courses",
+          "Nothing yet"
+        ]
+      },
+      {
+        "question": "Have you ever shadowed a professional, interned, or done any hands-on work?",
+        "options": ["Yes", "No"]
+      },
+      {
+        "question": "Would you like to be shown career paths based on:",
+        "options": [
+          "Your personality",
+          "Your major",
+          "What you enjoy doing",
+          "What skills are in demand"
+        ]
+      },
+      {
+        "question": "What’s most important to you in a future career?",
+        "options": [
+          "Earning potential",
+          "Job security",
+          "Work-life balance",
+          "Growth opportunities",
+          "Creativity",
+          "Making an impact",
+          "Working with people",
+          "Prestige/reputation"
+        ]
+      },
+      {
+        "question": "How much time can you dedicate each week to learning or career prep?",
+        "options": [
+          "Less than 1 hour",
+          "1–3 hours",
+          "3–5 hours",
+          "5–10 hours",
+          "More than 10 hours"
+        ]
+      },
+      {
+        "question": "What kind of learning experience do you prefer?",
+        "options": [
+          "Short videos",
+          "Real-world projects",
+          "Online courses",
+          "Mentorship",
+          "Reading blogs/books"
+        ]
+      }
   ];
 
   const currentStep = steps[step];
