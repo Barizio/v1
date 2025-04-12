@@ -31,11 +31,11 @@ export default function HireStep() {
       question: "What type of career are you considering right now (if any)?",
       options: ["Tech", "Business", "Design", "Medicine", "Research", "Cybersecurity", "Not Sure"],
     },
-    {
-      question: "Where do you see yourself in the next 3–5 years?",
-      input: true,
-      placeholder: "e.g., Working as a full-stack developer, Running my own business",
-    },
+    // {
+    //   question: "Where do you see yourself in the next 3–5 years?",
+    //   input: true,
+    //   placeholder: "e.g., Working as a full-stack developer, Running my own business",
+    // },
     {
       question: "Are you hoping to do any of the following in the next few years?",
       options: [
@@ -57,11 +57,11 @@ export default function HireStep() {
       question: "Does your course align with what you want to do long term?",
       options: ["Yes", "Not really", "Still figuring it out"],
     },
-    {
-      question: "What skills would you love to develop more?",
-      input: true,
-      placeholder: "e.g., Data analysis, Public speaking",
-    },
+    // {
+    //   question: "What skills would you love to develop more?",
+    //   input: true,
+    //   placeholder: "e.g., Data analysis, Public speaking",
+    // },
     {
       question: "What are you currently doing to build your career outside of school?",
       options: ["Side projects", "Internships", "Volunteering", "Courses", "Nothing yet"],
